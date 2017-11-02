@@ -1,0 +1,33 @@
+{
+  "name": "jsservice",
+  "version": "1.0.0",
+  "description": "a service to evaluate js code",
+  "main": "index.js",
+  "scripts": {
+    "grunt": "grunt",
+    "start": "nodemon ./dist/app.js | pino",
+    "watch": "concurrently --kill-others \"nodemon ./dist/app | pino\" \"grunt watch\"",
+    "build:dev": "SET NODE_ENV=development && npm run grunt",
+    "build:prod": "SET NODE_ENV=production && npm run grunt"
+  },
+  "author": "Jose Luis Olivares Rojas",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/restify": "^2.0.42",
+    "concurrently": "^3.4.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ts": "^6.0.0-beta.15",
+    "inversify": "^3.3.0",
+    "inversify-restify-utils": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "reflect-metadata": "^0.1.10",
+    "restify": "^4.3.0",
+    "restify-pino-logger": "^2.0.0",
+    "typescript": "^2.2.2",
+    "uuid": "^3.0.1",
+    "vows": "^0.8.1"
+  }
+}
